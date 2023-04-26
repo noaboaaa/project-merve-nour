@@ -1,0 +1,222 @@
+//OPDATEREDE VERSION
+{
+  "songs": {
+    "id01": {
+      "image": "https://i.postimg.cc/c4H21J41/image.png",
+      "description": "Kayseri, Turkey. Drinking tea on the balcony.",
+      "name": "Anonymous",
+      "year": 2022,
+      "song": [
+        {
+          "title": "Ah Canim Sevgilim - Demo",
+          "artist": "Rei 6"
+        }
+      ]
+    },
+    "id02": {
+      "image": "https://i.postimg.cc/G4PhGYdS/image.png",
+      "description": "Kongenlunden. My favourite place to go for walks.",
+      "name": "Anonymous",
+      "year": 2022,
+      "song": [
+        {
+          "title": "78 Stanley Bay",
+          "artist": "Chaos in The CBD"
+        }
+      ]
+    }
+  },
+  "id03": {
+    "image": "https://imgur.com/a/3kvYgHN",
+    "description": "a drum n base club (it was in fact a maersk container with a dj in it) in the middle of the mountains a bit outside of Beirut.",
+    "name": "Nour",
+    "year": 2021,
+    "song": [
+        {
+            "title": "Highlander",
+            "artist": "Calibre"
+        }
+    ]
+  },
+  "id04": {
+    "image": "https://i.postimg.cc/vmwkLFfp/image.png",
+    "description": "Karlstrup kalkgrav, Solrød.",
+    "name": "Anonymous",
+    "year": 2020,
+    "song": [
+      {
+        "title": "Loose Change",
+        "artist": "Brent Faiyaz"
+      }
+    ]
+  },
+  "id05": {
+    "image": "https://imgur.com/a/zG0ztou",
+    "description": "The city that smells of zaatar. Where my soul will be when im gone. .",
+    "name": "Anonymous",
+    "year": 2021,
+    "song": [
+      {
+        "title": "Le Beirut",
+        "artist": "Fairuz"
+      }
+    ]
+  },
+"id06": {
+  "image": "https://imgur.com/a/hJWvP6N",
+  "description": "My favorite author. I've never felt as seen as i did when reading her books.",
+  "name": "Nour",
+  "year": 2023,
+  "song": [
+    {
+      "title": "Fade Into You",
+      "artist": "Mazzy Star"
+    }
+  ]
+},
+"id07": {
+  "image": "https://i.postimg.cc/14xrhPmS/image.png",
+  "description": "Unknown location somewhere north of Copenhagen.",
+  "name": "Stranger",
+  "year": 2019,
+  "song": [
+    {
+      "title": "7:00",
+      "artist": "Bryson Tiller"
+    }
+  ]
+},
+"id08": {
+  "image": "https://i.postimg.cc/XqW9QLQN/image.png",
+  "description": "Cappadocia, Turkey.",
+  "name": "Anonymous",
+  "year": 2018,
+  "song": [
+    {
+      "title": "Son",
+      "artist": "insanlar gercek olsa"
+    }
+  ]
+},
+"id09": {
+  "image": "https://imgur.com/a/YXlwlve",
+  "description": "Beer. too much of it.",
+  "name": "Nour",
+  "year": 2022,
+  "song": [
+    {
+      "title": "Talk To Me You'll Understand",
+      "artist": "Ross From Friends"
+    }
+  ]
+},
+"id10": {
+  "image": "https://imgur.com/a/X7qDpd7",
+  "description": "I had just gotten my first proper film camera and went for a walk at Christianshavn.",
+  "name": "Stranger",
+  "year": 2020,
+  "song": [
+    {
+      "title": "From A To B",
+      "artist": "VETO"
+    }
+  ]
+},
+"id11":{
+  "image": "https://i.postimg.cc/gJWwWJRN/image.png",
+  "description": "Istanbul, Turkey.",
+  "name": "Anonymous",
+  "year": 2023,
+  "song": [
+    {
+      "title": "Lovers Rock",
+      "artist": "TV Girl"
+    }
+  ]
+},
+"id12":{
+  "image": "https://i.postimg.cc/RFgvDVT3/image.png",
+  "description": "Kadiköy (Istanbul, Turkey).",
+  "name": "Anonymous",
+  "year": 2023,
+  "song": [
+    {
+      "title": "Gave Your Love Away",
+      "artist": "Majid Jordan"
+    }
+  ]
+},
+"id13":{
+  "image": "https://imgur.com/a/prBCnaY",
+  "description": "January, Kongelunden.",
+  "name": "Anonymous",
+  "year": 2023,
+  "song": [
+    {
+      "title": "Warm In These Blue Jeans",
+      "artist": "Rasharn Powell"
+    }
+  ]
+},
+"id14":{
+  "image": "https://i.postimg.cc/Hk0DNkYp/image.png",
+  "description": "Sunrise.",
+  "name": "Anonymous",
+  "year": 2023,
+  "song": [
+    {
+      "title": "I want her too",
+      "artist": "Artie J"
+    }
+  ]
+},
+"id15":{
+  "image": "https://i.postimg.cc/TP46VH2m/image.png",
+  "description": "My birthday cake.",
+  "name": "Stranger",
+  "year": 2022,
+  "song": [
+    {
+      "title": "Hennessey Memories",
+      "artist": "Tory Lanez"
+    }
+  ]
+},
+"id16": {
+  "image": "https://i.postimg.cc/fLDxv5Hz/image.png",
+  "description": "Pretty sunset on my way home.",
+  "name": "Stranger",
+  "year": 2021,
+  "song": [
+    {
+      "title": "Karreuche",
+      "artist": "Tory Lanez"
+    }
+  ]
+},
+"id17":{
+  "image": "https://imgur.com/a/2FMWpbv",
+  "description": "Sometimes maybe good, sometimes maybe shit",
+  "name": "Stranger",
+  "year": 2023,
+  "song": [
+    {
+      "title": "Lala",
+      "artist": "Shkoon"
+    }
+  ]
+},
+"id18":{
+  "image": "https://i.postimg.cc/rpLW8Q21/image.png",
+  "description": "View from a mosque.",
+  "name": "Stranger",
+  "year": 2019,
+  "song": [
+    {
+      "title": "One Way",
+      "artist": "6LACK"
+    }
+  ]
+}
+}
+
