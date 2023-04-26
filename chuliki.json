@@ -1,6 +1,5 @@
-//OPDATEREDE VERSION
 {
-  "songs": {
+  "posts": {
     "id01": {
       "image": "https://i.postimg.cc/c4H21J41/image.png",
       "description": "Kayseri, Turkey. Drinking tea on the balcony.",
@@ -24,8 +23,8 @@
           "artist": "Chaos in The CBD"
         }
       ]
-    }
-  },
+    },
+  
   "id03": {
     "image": "https://imgur.com/a/3kvYgHN",
     "description": "a drum n base club (it was in fact a maersk container with a dj in it) in the middle of the mountains a bit outside of Beirut.",
@@ -218,5 +217,9 @@
     }
   ]
 }
-}
+}}
+
+
+
+
 
