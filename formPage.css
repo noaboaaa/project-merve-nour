@@ -1,0 +1,214 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+body {
+  background-image: url(https://lh3.googleusercontent.com/-0Sp8b99qOVy832wzIFhqSF763SdqNX93wVAsT3QN63i_i1z0lo6PjBpTIDyhWl8mnJ3w-Qf4uBQHSCiJgBges17COulR9Jn0QO-Xuuon3JxeGkTQsQudOIpbhvfnxRk1Rgtz_3qtMGG1uporAPo_rQptsNGe27goVw8e6wiAiqhaaKVnB0Eet74ssYwLawMdl0oHFYm0sJ1q7gmHuCc7vGR_517tDG9ZwP0bwnE1YwtR0a88c7AMhS75cTLC42MWv149rg2HZHuR4MS1Xh1R9g9G_oT2009U5ulIT2wxddYZ1s078N-neBpxjsN44HCSBcCm-hMW9upW3TTUeSG-n2S7xHFaZhyRenkSySbMSFhAEuuUhff542MY_vn_TtF1GoX1mOQgLrtebil4m4O__i3SPPClSciGkvDH3C0yIqu1-JAFmVLYXsgXaU_TlN6RmuZUwb-SSOV8ZQkd0zZdpwmKch_Y93ZzFUEZvHKDqB2DG3hzdgTCuMwfgk5g43r2IKRT9s0ya16-SfiVPv6Z3mWP8yXf7--AQ06yNnaDw6uSH_4dYy6RAPIubegZxGGkVD9t5TWRPkdVzgvCaCOmYOtn8-Varp9F6blq66zRDJuzCCyvkR4AMjkD2iblBiN9UtWP98UpkFckMEkIqVoUk75PcKO_lilN5DaCvnc24_bPRks2mjT8bAf2--t8_1WzDBFto0Ohq_UMrNZksem2svh4vxS2Zvlg9U0wKsRbXqjFt0f_L9RRKkqYV1AxGpRIqSoMNzt0SvXRkM9SCLUg0VZYa8g6f_B1RYqHvgatCMDuSp9v9WeEoFqe7anwlFY9m9ty2G-BNGfi0LAyjDPuYS6fCDCoGYCBnTkaDyLWXJDXAT4zCyspry6UETbE43ff2BwwjuAVcRP0YxKeICcyDsu_P9bL34bfHHdZwfd6jixEdn4=w1170-h658-s-no?authuser=0);
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+header a {
+	color: none;
+	font-size: 25px;
+	text-decoration: none; 
+	display: block;
+	margin: 0 auto;
+	padding: 20px;
+	width: fit-content;
+}
+
+
+header h1 {
+	color: rgba(245, 245, 245, 0.714);
+	font-size: 25px;
+	margin: 0;
+    text-align: center;
+}
+
+header h1:hover {
+	color: #ccc;
+}
+
+
+footer {
+	padding: 20px 0;
+	text-align: center;
+	position: fixed;
+	float: left;
+	bottom: 0;
+	width: 100%;
+}
+
+footer ul {
+	margin: 0;
+	padding: 0;
+    float: left;
+	list-style-type: none;
+}
+
+footer li {
+	display: inline-block;
+	margin: 0 65px;
+}
+
+footer li a {
+	color: rgba(245, 245, 245, 0.714);
+	font-size: 20px;
+	text-decoration: none;
+}
+
+footer li a:hover {
+	color: #ccc;
+}
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  max-height: 620px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#picture-description {
+  height: 120px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#picture-author,
+#picture-song,
+#picture-year {
+  display: inline-block;
+  width: 45%;
+  margin: 0 5% 10px 5%;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/*form styling*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Copperplate, sans-serif;
+    color: white;
+}
+
+form{
+    background: rgba(128, 128, 128, 0.267);
+    width: 640px;
+    margin: 50px auto;
+    max-width: 97%;
+    border-radius: 10px;
+    padding: 55px 30px 40px 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.184);
+    height: 100%; /* added */
+}
+
+form .title h2{
+    letter-spacing: 5px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+}
+
+form .half{
+    display: flex;
+    justify-content: space-between;
+}
+
+form .half .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form label{
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+}
+
+form .half .item input{
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding:16px ;
+    width: 100%;
+    height: 44px;
+    background:transparent ;
+    font-size: 17px;
+}
+
+form .full{
+    margin-bottom: 24px;
+    padding-top: 10px;
+}
+
+form .full textarea{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+}
+
+form .action{
+    margin-bottom: 30px;
+}
+
+.full label {
+  display: block;
+  text-align: center;
+}
+
+form .action input{
+    background: rgba(128, 128, 128, 0.267);
+    border-radius: 2px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 26px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 10px 0 12px;
+    margin-right: 10px;
+}
+
+.item1,
+.item2,
+.item3 {
+  text-align: center;
+}
+
