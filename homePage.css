@@ -1,0 +1,82 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+body {
+  background-image: url("https://lh3.googleusercontent.com/cbGmvuOlcpdWYFKJsEK8ngZrKCENKXDmPFeQVQQSuk4Vef5904Znr78BfmHdr-0babs9mJfz2t73hvNEDknjdPjs6wDTtyEedf2oQ-mQrmWS-hHd_zdwgMLnGu_SFjO8RfFjbdDZQwYzfy2DXm79QzTPLTEOvSQaflyJ0EP_1fqQw46X9CcjTUajE7_6uoE9uLpa-_4AIIGrKYzyGrPOajbVYNbRDcb2r7HBWuo2B6jV0vVGcizeSx96zhFllRs_8jqxJWx2nbppPrv0m1eAtynA9uSJ88zLlZvzRfMRg_crU9w2ckKeM4xjgvLPVpeUhSXV24zI1urNYTAAfsd65SjWpThvamV717vm141TwtDXD8c7hg9EIgVJzAsoN-Fe4pgwSokzdbu4h1y54XicV9LNe-6JlUZBUTfZZ9JkiNJDOOiNOrwRdGkUi5H2zHngO6VyCTzPTjS_pqxKd4WTH4rlnWudESa6B7o0oMGpPGTcik4CDsY0M9MA9rpwdHgD3NbCrWGxIlYMmIdoQN6nscSBK6MSiBq-d1i_WTIyYrDbBDaKVmz4aBcLWs1oX-7ODhRkfCMXo2za5UUH3cK4sDXcr09b4GSLEkPcZhsgVKd20g15lYD0BH0MI27gZ4E8K9sQE7gI9Lry7yJWJ8D0DOvWXTtTmn-wio_32_94rmHWCqdE2fYnog8F4bl3VmHkEcD98PGvXAW0UuDDuqk2miOcKdMkZhliNqI700TkIG4VYycVQYxpuO8KJGnJwMZJYVvMYVR28mX276wm61RCH_AtI9poViU06BXOcOVflDca5bL6UxtU3sbC3XE6cjN2YADmfMXZcZ5MVNi8WH7Gpe95Ujqrq1HjaBoJ7a8tnCWPjDgehUr282ydqp8cJFq5gSc2WbeS0xLn2UV57yK65pGRSBqIYX_bJ-Tx7Dz9i0DPZSEU=w828-h506-s-no?authuser=0");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+header a {
+	color: none;
+	font-size: 25px;
+	text-decoration: none; 
+	display: block;
+	margin: 0 auto;
+	padding: 20px;
+	width: fit-content;
+}
+
+
+header h1 {
+	color: rgba(245, 245, 245, 0.714);
+	font-size: 25px;
+	margin: 0;
+    text-align: center;
+}
+
+header h1:hover {
+	color: #ccc;
+}
+
+.text-left {
+	position: absolute;
+	width: 50%;
+}
+
+.text-left h3 {
+    color: rgba(245, 245, 245, 0.714);
+	margin: 0;
+	padding: 12px;
+	font-size: 21px;
+    top: 0;
+
+}
+
+
+footer {
+	padding: 20px 0;
+	text-align: center;
+	position: fixed;
+	float: left;
+	bottom: 0;
+	width: 100%;
+}
+
+footer ul {
+	margin: 0;
+	padding: 0;
+    float: left;
+	list-style-type: none;
+}
+
+footer li {
+	display: inline-block;
+	margin: 0 65px;
+}
+
+footer li a {
+	color: rgba(245, 245, 245, 0.714);
+	font-size: 20px;
+	text-decoration: none;
+}
+
+footer li a:hover {
+	color: #ccc;
+}
