@@ -1,240 +1,53 @@
-
 {
   "posts": {
     "id01": {
-      "image": "https://i.postimg.cc/c4H21J41/image.png",
-      "description": "Kayseri, Turkey. Drinking tea on the balcony.",
-      "name": "Anonymous",
-      "year": 2022,
-      "song": "Ah Canim Sevgilim  Demo Rei 6" 
-    },
-    "id02": {
       "image": "https://i.postimg.cc/G4PhGYdS/image.png",
       "description": "Kongenlunden. My favourite place to go for walks.",
       "name": "Anonymous",
       "year": 2022,
       "song": "78 Stanley Bay Chaos in The CBD"
     },
-  "id03": {
-    "image": "https://imgur.com/a/3kvYgHN",
-    "description": "a drum n base club(a maersk container) in the middle of the mountains a bit outside of Beirut.",
-    "name": "Nour",
-    "year": 2021,
-    "song": "Highlander Calibre"
-  },
-  "id04": {
-    "image": "https://i.postimg.cc/vmwkLFfp/image.png",
-    "description": "Karlstrup kalkgrav, Solrød.",
-    "name": "Anonymous",
-    "year": 2020,
-    "song": "Loose Change Brent Faiyaz"
-  },
-  "id05": {
-    "image": "https://imgur.com/a/zG0ztou",
-    "description": "The city that smells of zaatar. Where my soul will be when im gone.",
-    "name": "Anonymous",
-    "year": 2021,
-    "song": "Fe Kahwa Ala El Mafrak Fairuz"
-  },
-"id06": {
-  "image": "https://imgur.com/a/hJWvP6N",
-  "description": "My favorite author. I've never felt as seen as i did when reading her books.",
-  "name": "Nour",
-  "year": 2023,
-  "song": "Fade Into You Mazzy Star"
-},
-"id07": {
-  "image": "https://i.postimg.cc/14xrhPmS/image.png",
-  "description": "Unknown location somewhere north of Copenhagen.",
-  "name": "Stranger",
-  "year": 2019,
-  "song": "7:00 Bryson Tiller"
-},
-"id08": {
-  "image": "https://i.postimg.cc/XqW9QLQN/image.png",
-  "description": "Cappadocia, Turkey.",
-  "name": "Anonymous",
-  "year": 2018,
-  "song": "Son insanlar gercek olsa"
-},
-"id09": {
-  "image": "https://imgur.com/a/YXlwlve",
-  "description": "Beer. too much of it.",
-  "name": "Nour",
-  "year": 2022,
-  "song": "Talk to me You'll Understand Ross From Friends"
-},
-"id10": {
-  "image": "https://imgur.com/a/X7qDpd7",
-  "description": "I had just gotten my first proper film camera and went for a walk at Christianshavn.",
-  "name": "Stranger",
-  "year": 2020,
-  "song": "From A to B VETO" 
-},
-"id11":{
-  "image": "https://i.postimg.cc/gJWwWJRN/image.png",
-  "description": "Istanbul, Turkey.",
-  "name": "Anonymous",
-  "year": 2023,
-  "song": "Lovers Rock TV Girl"
-},
-"id12":{
-  "image": "https://i.postimg.cc/RFgvDVT3/image.png",
-  "description": "Kadiköy (Istanbul, Turkey).",
-  "name": "Anonymous",
-  "year": 2023,
-  "song": "Gave Your Love Away Majid Jordan"
-},
-"id13":{
-  "image": "https://imgur.com/a/prBCnaY",
-  "description": "January, Kongelunden.",
-  "name": "Anonymous",
-  "year": 2023,
-  "song": "Born Slippy (Nuxx) Underworld"
-},
-"id14":{
-  "image": "https://i.postimg.cc/Hk0DNkYp/image.png",
-  "description": "Sunrise.",
-  "name": "Anonymous",
-  "year": 2023,
-  "song": "I want her too Artie J"
-},
-"id15":{
-  "image": "https://i.postimg.cc/TP46VH2m/image.png",
-  "description": "My birthday cake.",
-  "name": "Stranger",
-  "year": 2022,
-  "song": "Hennessey Memories Tory Lanez"
-},
-"id16": {
-  "image": "https://i.postimg.cc/fLDxv5Hz/image.png",
-  "description": "Pretty sunset on my way home.",
-  "name": "Stranger",
-  "year": 2021,
-  "song": "Karreuche Tory Lanez"
-},
-"id17":{
-  "image": "https://imgur.com/a/2FMWpbv",
-  "description": "Sometimes maybe good, sometimes maybe shit",
-  "name": "Stranger",
-  "year": 2023,
-  "song": "Lala Shkoon"
-},
-"id18":{
-  "image": "https://i.postimg.cc/rpLW8Q21/image.png",
-  "description": "View from a mosque.",
-  "name": "Stranger",
-  "year": 2019,
-  "song": "One Way 6LACK"
+    "id02": {
+      "image": "https://i.postimg.cc/CMDqdtnB/cpm35-2023-04-20-194920-302.jpg",
+      "description": "light beaming moments before dusk",
+      "name": "Anonymous",
+      "year": 2021,
+      "song": "Highlander Calibre"
+    },
+    "id03": {
+      "image": "https://i.postimg.cc/4ypxWDRY/la-la-l.jpg",
+      "description": "The city that smells of zaatar. Where my soul will be when im gone.",
+      "name": "Anonymous",
+      "year": 2021,
+      "song": "Fe Kahwa Ala El Mafrak Fairuz"
+    },
+    "id04": {
+      "image": "https://i.postimg.cc/c4H21J41/image.png",
+      "description": "Kayseri, Turkey. Drinking tea on the balcony.",
+      "name": "Anonymous",
+      "year": 2022,
+      "song": "Ah Canim Sevgilim  Demo Rei 6"
+    },
+    "id05": {
+      "image": "https://i.postimg.cc/Yqh7VBz5/IMG-3652.jpg",
+      "description": "My favorite author. I've never felt as seen as i did when reading her books.",
+      "name": "Anonymous",
+      "year": 2023,
+      "song": "Fade Into You Mazzy Star"
+    },
+    "id06": {
+      "image": "https://i.postimg.cc/Zq0DYJCm/VTF9l6X.jpg",
+      "description": "My first heartbreak. I had just gotten my first proper film camera and went for a walk in Christianshavn.",
+      "name": "Stranger",
+      "year": 2020,
+      "song": "From A to B VETO"
+    },
+    "id07": {
+      "image": "https://i.postimg.cc/zGP3HkXh/onHjnws.jpg",
+      "description": " Back when it felt like we were stuck in a time loop. ",
+      "name": "Anonymous",
+      "year": 2023,
+      "song": "Opal Bicep, Four Tet"
+    }
+  }
 }
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
