@@ -88,3 +88,20 @@ footer li a:hover {
 .text-container h3 {
   margin: 0 0 1rem; 
 }
+
+.button-like-text {
+  background: none;
+  border: none;
+  color: rgba(245, 245, 245, 0.714);
+  font-size: 20px;
+  font-family: Copperplate, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.button-like-text:hover {
+  color: #ccc;
+  
+}
