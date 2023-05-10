@@ -8,6 +8,8 @@ window.addEventListener("load", initApp);
 function initApp() {
   console.log("så dæh nu dåh");
   updatePostsGrid();
+  //--------------CREATEPOST-----------------//
+
   document
     .querySelector("#open-create-post-dialog")
     .addEventListener("click", showCreatePost);
@@ -19,11 +21,20 @@ function initApp() {
   document
     .querySelector("#form-create-post")
     .addEventListener("submit", createPostClicked);
+
+  //-------------UPDATE POST/ DIALOG CLICKED-------------//
+
   document
     .querySelector("#form-update-post")
     .addEventListener("submit", updatePostClicked);
 
   document
+    .querySelector("#btn-close-dialog")
+    .addEventListener("click", hidePostClicked);
+
+  //-------------SEARCH SORT FILTER-------------//
+
+  /*document
     .querySelector("#input-search")
     .addEventListener("keyup", inputSearchChanged);
   document
@@ -31,13 +42,7 @@ function initApp() {
     .addEventListener("search", inputSearchChanged);
   document
     .querySelector("#select-sort-by")
-    .addEventListener("change", sortPosts);
-  document
-    .querySelector("#close-create-button")
-    .addEventListener("click", hideCreatePost);
-  document
-    .querySelector("#btn-close-dialog")
-    .addEventListener("click", hidePostClicked);
+    .addEventListener("change", sortPosts);*/
 }
 
 // ============== events ============== //
