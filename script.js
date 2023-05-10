@@ -17,6 +17,9 @@ function initApp() {
   document
     .querySelector("#close-create-post-dialog")
     .addEventListener("click", hideCreatePost);
+ document
+   .querySelector("#chuliki")
+   .addEventListener("submit", createPostClicked);
 
   document
     .querySelector("#form-create-post")
@@ -127,7 +130,6 @@ function showCreatePost() {
   if (createPostDialog.showModal) {
     createPostDialog.showModal();
   } else {
-    // In case the browser does not support the `showModal` method, fall back to displaying the dialog using CSS
     createPostDialog.style.display = "block";
     document.querySelector("#overlay").style.display = "block";
   }
@@ -135,19 +137,22 @@ function showCreatePost() {
 
 function hideCreatePost() {
   console.log("closed create post dialog!");
-  const createPostDialog = document.querySelector("#close-create-button");
+  const createPostDialog = document.querySelector("#create-post-dialog");
   if (createPostDialog.close) {
     createPostDialog.close();
   } else {
-    // In case the browser does not support the `close` method, fall back to hiding the dialog using CSS
     createPostDialog.style.display = "none";
     document.querySelector("#overlay").style.display = "none";
   }
 }
 
 function createPostClicked(event) {
+  console.log("test");
   event.preventDefault(); // Prevent form submission and page refresh
-  const form = this;
+  const form = document.querySelector("#chuliki");
+  console.log("hi");
+  console.log(form.image); // Check the value of form.image
+  console.log(form.description); // Check the value of form.description
   const image = form.image.value;
   const description = form.description.value;
   const name = form.name.value;
@@ -158,6 +163,7 @@ function createPostClicked(event) {
 }
 
 async function createPost(image, description, name, year, song) {
+  console.log("test");
   const newPost = {
     image: image,
     description: description,
