@@ -24,14 +24,12 @@
     <label for="input-search">Search:</label>
 <input type="text" id="input-search" placeholder="Search">
 
-    <label for="select-sort-by">Sort by:</label>
-<select id="select-sort-by">
-  <option value="name">Name</option>
-  <option value="year">Year</option>
-  <option value="song">Song</option>
+<select id="sort-options">
+    <option value="nosort" selected>Original Order</option>
+    <option value="year">Sort by Year (Newest First)</option>
+    <option value="song">Sort by Song Title (A-Z)</option>
 </select>
 
- 
 
 
   <!-- grid container  -->
@@ -79,7 +77,8 @@
     <div class="item">
       <label for="picture">upload a picture</label>
       <p>of a memory of something silly or something sad. a sunset a face a ladybug.</p>
-      <input type="file" id="picture-upload" accept="image/*" required >
+<input type="file" id="picture-upload" accept="image/*" required onchange="onImageSelected(event)">
+
     </div>
   </div>
   <div class="full">
@@ -101,8 +100,6 @@
     <label for="year">what year was it taken?</label>
   <input type="text" id="picture-year" placeholder="2019">
   </div>
-
-
   <div class="action">
     <input id="form-create-post"type="submit" value="post">
     <input type="reset" value="reset">
@@ -119,8 +116,6 @@
 
  <dialog id="update-post-dialog">
   <h2>update post</h2>
-
-  
 
   <form id="form-update-post" method="dialog">
 
@@ -159,16 +154,6 @@
 <button id="btn-update" class="button">update</button>
   </form>
  </dialog>
-
-    <!-----------------------Delete Post--------------------------------->
-
- <dialog id="delete-post-dialog">
-      <h2>Do you want to delete this post?</h2>
-      <form method="dialog" id="form-delete-post">
-        <button type="button" class="btn-cancel">No</button>
-        <button type="button" class="confirm-delete">Yes</button>
-      </form>
-  </dialog>
 
   <footer>
     <ul>

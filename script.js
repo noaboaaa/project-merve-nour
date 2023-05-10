@@ -5,6 +5,8 @@ let posts = [];
 
 window.addEventListener("load", initApp);
 
+//====================INITAPP=================================//
+
 function initApp() {
   console.log("så dæh nu dåh");
   updatePostsGrid();
@@ -17,9 +19,6 @@ function initApp() {
   document
     .querySelector("#close-create-post-dialog")
     .addEventListener("click", hideCreatePost);
- document
-   .querySelector("#chuliki")
-   .addEventListener("submit", createPostClicked);
 
   document
     .querySelector("#form-create-post")
@@ -41,18 +40,11 @@ function initApp() {
     .querySelector("#input-search")
     .addEventListener("input", searchPosts);
 
-  /*document
-    .querySelector("#input-search")
-    .addEventListener("keyup", inputSearchChanged);
-  document
-    .querySelector("#input-search")
-    .addEventListener("search", inputSearchChanged);
-  document
-    .querySelector("#select-sort-by")
-    .addEventListener("change", sortPosts);*/
+  //-------------SORT POSTS-------------//
+  document.querySelector("#sort-options").addEventListener("change", sortPosts);
 }
 
-// ============== events ============== //
+// ============== EVENTS ============== //
 
 function cancelDelete() {
   console.log("cancel btn clicked");
@@ -64,7 +56,7 @@ function cancelCreate() {
   document.querySelector("#dialog-create-post").close();
 }
 
-// ============== posts ============== //
+// ====================== get POSTS =========================== //
 // Get all posts - HTTP Method: GET
 async function getPosts() {
   const response = await fetch(`${endpoint}/posts.json`);
@@ -107,7 +99,7 @@ function showPosts(listOfPosts) {
   });
 }
 
-//===================SEARCH SORT FILTER-------------//
+//===================SEARCH SORT FILTER===========================//
 
 function searchPosts() {
   const query = document.querySelector("#input-search").value.toLowerCase();
@@ -121,8 +113,25 @@ function searchPosts() {
   });
   showPosts(filteredPosts);
 }
+function sortPosts(event) {
+  const option = event.target.value;
 
-//------create post-------------------------------/
+  if (option === "year") {
+    // Sort by year
+    posts.sort((a, b) => b.year - a.year);
+  } else if (option === "song") {
+    // Sort by song
+    posts.sort((a, b) => a.song.localeCompare(b.song));
+  } else if (option === "nosort") {
+    // Sort by id to get original order (assuming ids are incremental and reflect the original order)
+    posts.sort((a, b) => a.id - b.id);
+  }
+
+  // Update display
+  showPosts(posts);
+}
+
+//======================CREATE POST===============================//
 
 function showCreatePost() {
   console.log("opened create post dialog!");
@@ -130,6 +139,7 @@ function showCreatePost() {
   if (createPostDialog.showModal) {
     createPostDialog.showModal();
   } else {
+    // In case the browser does not support the `showModal` method, fall back to displaying the dialog using CSS
     createPostDialog.style.display = "block";
     document.querySelector("#overlay").style.display = "block";
   }
@@ -137,22 +147,19 @@ function showCreatePost() {
 
 function hideCreatePost() {
   console.log("closed create post dialog!");
-  const createPostDialog = document.querySelector("#create-post-dialog");
+  const createPostDialog = document.querySelector("#close-create-button");
   if (createPostDialog.close) {
     createPostDialog.close();
   } else {
+    // In case the browser does not support the `close` method, fall back to hiding the dialog using CSS
     createPostDialog.style.display = "none";
     document.querySelector("#overlay").style.display = "none";
   }
 }
 
 function createPostClicked(event) {
-  console.log("test");
   event.preventDefault(); // Prevent form submission and page refresh
-  const form = document.querySelector("#chuliki");
-  console.log("hi");
-  console.log(form.image); // Check the value of form.image
-  console.log(form.description); // Check the value of form.description
+  const form = this;
   const image = form.image.value;
   const description = form.description.value;
   const name = form.name.value;
@@ -163,7 +170,6 @@ function createPostClicked(event) {
 }
 
 async function createPost(image, description, name, year, song) {
-  console.log("test");
   const newPost = {
     image: image,
     description: description,
@@ -187,7 +193,7 @@ async function updatePostsGrid() {
   showPosts(posts); // show all posts (append to the DOM) with posts as argument
 }
 
-//-------------POST CLICKED DIALOG OPENED--------------------/
+//======================POST CLICKED DIALOG OPENED======================/
 
 // called when image is clicked
 function imageClicked(postObject) {
@@ -249,7 +255,7 @@ async function deleteClicked(postObject) {
   }
 }
 
-//-------------UPDATE POST --------------------/
+//======================UPDATE POST ======================//
 
 function updateClicked(postObject) {
   // Implement update functionality
