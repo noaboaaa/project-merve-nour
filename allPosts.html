@@ -17,7 +17,6 @@
     <a href="homePage.html"><h1>The Illusion of Immortality</h1></a>
   </header>
 
-
     <!---------------Search and Sort functions------------------------>
       <br />
       <br />
@@ -29,7 +28,6 @@
     <option value="year">Sort by Year (Newest First)</option>
     <option value="song">Sort by Song Title (A-Z)</option>
 </select>
-
 
 
   <!-- grid container  -->
@@ -113,45 +111,41 @@
 
 
     <!-----------------------Update Post--------------------------------->
-
  <dialog id="update-post-dialog">
-  <h2>update post</h2>
+  <h2>Update Post</h2>
 
   <form id="form-update-post" method="dialog">
 
-  <div class="title">
-    <h2>update post</h2>
-  </div>
-
-   <div id="update-post-image-container">
+  <div id="update-post-image-container">
      <img id="update-post-image"></img>
   </div>
   <div class="half">
     <div class="item">
-      <label for="picture">upload a new picture. or dont.</label>
+      <label for="picture">Upload a new picture. Or don't.</label>
       <input type="file" id="picture-upload" accept="image/*" required >
     </div>
   </div>
   <div class="full">
-    <label for="write">write something new.</label>
-     <textarea name="" id="write" ></textarea required>
+    <label for="write">Write something new.</label>
+     <textarea name="" id="update-post-description" required></textarea>
   </div>
   <div class="item1">
-    <label for="name">add your name. or don't.</label>
-  <input type="text" id="picture-author" placeholder="anon">
+    <label for="name">Add your name. Or don't.</label>
+  <input type="text" id="update-post-name" placeholder="Anon">
   </div>
 
    <div class="item2">
-    <label for="song">add a song it reminds you of.</label>
-  <input type="text" id="picture-song" placeholder="just say yes snow patrol">
+    <label for="song">Add a song it reminds you of.</label>
+  <input type="text" id="update-post-song" placeholder="Just say yes snow patrol">
   </div>
 
   <div class="item3">
-    <label for="year">what year was it taken?</label>
-  <input type="text" id="picture-year" placeholder="2019">
+    <label for="year">What year was it taken?</label>
+  <input type="text" id="update-post-year" placeholder="2019">
   </div>
 
-<button id="btn-update" class="button">update</button>
+  <input type="hidden" id="update-post-id" value="">
+  <button id="btn-update" class="button">Update</button>
   </form>
  </dialog>
 

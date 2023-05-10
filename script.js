@@ -257,10 +257,6 @@ async function deleteClicked(postObject) {
 
 //======================UPDATE POST ======================//
 
-function updateClicked(postObject) {
-  // Implement update functionality
-}
-
 function getPostById(id) {
   for (let i = 0; i < posts.length; i++) {
     if (posts[i].id === id) {
@@ -270,28 +266,19 @@ function getPostById(id) {
   return null; // return null if post with given id not found
 }
 
-function addPost(title, content) {
-  // code to add post to array
-}
-
-function getPostById(id) {
-  // code to retrieve post by id from array
-}
-
-function updatePost(id, newTitle, newContent) {
-  // code to update post in array
-}
-
-function deletePost(id) {
-  // code to delete post from array
-}
-
 function showUpdatePostDialog(postId) {
   var post = getPostById(postId);
-  if (post && post.title && post.body) {
-    document.getElementById("update-post-title").value = post.title;
-    document.getElementById("update-post-body").value = post.body;
+  console.log("postId:", postId);
+  console.log("post:", post);
+
+  if (post && post.name && post.description) {
+    document.getElementById("update-post-name").value = post.name;
+    document.getElementById("update-post-description").value = post.description;
+    document.getElementById("update-post-year").value = post.year;
+    document.getElementById("update-post-song").value = post.song;
+    document.getElementById("update-post-image").src = post.image;
     document.getElementById("update-post-id").value = postId;
+    console.log("Adding show class to update post dialog");
     document.getElementById("update-post-dialog").classList.add("show");
   } else {
     console.log("Post or post properties are undefined");
@@ -311,8 +298,9 @@ function updateClicked(postObject) {
     return;
   }
 
-  showUpdatePostDialog(postObject);
+  showUpdatePostDialog(postObject.id);
 }
+
 
 async function updatePostClicked(event) {
   event.preventDefault();
