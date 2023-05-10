@@ -36,7 +36,8 @@ header h1:hover {
 
 .text-left {
 	position: absolute;
-	width: 50%;
+	width: 3%;
+	top: -40;
 }
 
 .text-left h3 {
@@ -44,7 +45,8 @@ header h1:hover {
 	margin: 0;
 	padding: 12px;
 	font-size: 21px;
-    top: 0;
+    top: 50;
+	bottom: 40;
 
 }
 

@@ -21,19 +21,18 @@
     <!---------------Search and Sort functions------------------------>
       <br />
       <br />
-      <input type="search" id="input-search" placeholder="Search by title" />
-      <div id="sort-by-container">
-        <label for="select-sort-by"
-          >Sort by:
-          <select id="select-sort-by">
-            <option value="" selected>No sort</option>
-            <option value="year">year</option>
-          </select>
-        </label>
-      </div>
-    </header>
+    <label for="input-search">Search:</label>
+<input type="text" id="input-search" placeholder="Search">
 
-  
+    <label for="select-sort-by">Sort by:</label>
+<select id="select-sort-by">
+  <option value="name">Name</option>
+  <option value="year">Year</option>
+  <option value="song">Song</option>
+</select>
+
+ 
+
 
   <!-- grid container  -->
 
@@ -161,11 +160,6 @@
   </form>
  </dialog>
 
-
-
-
- 
-
     <!-----------------------Delete Post--------------------------------->
 
  <dialog id="delete-post-dialog">
@@ -189,3 +183,12 @@
 </html>
 
 
+
+
+
+
+
+
+
+
+   

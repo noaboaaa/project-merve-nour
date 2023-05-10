@@ -6,16 +6,16 @@ html, body{
 
 
 body {
-  	background-image: url("https://lh3.googleusercontent.com/xNUt9B8kkkrn5A76lTTCpinOmjce1l1cstFE43X-y6TQDu_k0V3dkLTlYfH39dkUny8ucso9OmMNNWqv56weFS9Xzd9dhkzcAg1e-Vl6XXDOttJ7YD9I9ZmnpuJ7N-9UvOy62Sc0vZucZ2xeWJqFZ4wakV9ADsoBiS8UkH3ANbrTInKvTISouBiGdzQ51dS91gXG5YQ2cPjjB6jw7Jg0gQS3I9DiWW3Lo7UQ7jA9VGsU9ZYgdx6EdkeIRMMy8uxuRI1SXG_3yLwFtxhA1x9fxJ-NQl8qOWhWVroIJcLl1QjHEv0y89x6Fj_BG0N2ZZDUm6o9a9Iv4fD2Mqh0Du-M9ndvlAGb-yCm3IS9whoClATQpOyUxflKRHGuMIq7agYi2SKNc_9moApU9upEaMMf9fKixrx5635UIrHP_XrD--ZKyH9xE1Zg3pUUOkqXB_0pmYnYGGR44iNDSmRL82IXD6c5GNTYg1T-4LxroUGFLyyhD_XZnZJSaMcpY3SwTcLND74CiuMIMH3hVMT85xL0v4Pq9rcwCQeyEW-VYwJhdXimjoa1Y5f4kdlUjIT3ArKK69P-54-fKv9JlhpkE57fgzmB4rm_VBuCCgT2siZ__anb30l5KaX5RH2hPgd7A1dT7ZeVnasCs0SYbBIn6vm-t-xcCbUh8MCgRqyKSxrFn6orhtcuVfMgsl3t1j25lXsnsR0abF5W1zMMiQaiWsdEMa-5qb0k-dULSAl55kRojYCcB9nDY0a1ImuHzq5GRU1bxwDY0LWLtuRsE_IvwRGi2uejQT80o39MBXRHw1ShMfongXQlU7CPyae8FAECYC-0ozMjInClMcnn0iuXpmyAwNhEjkAXkL-RPPvcK-ydB2_ty4kd2L-uVKez2JJIjGrYOK-WyJ_yowoRRkOtu9Wrdb4ULOC30WKOYIOUoWu0xLjUHeAF=w2041-h1353-s-no?authuser=0");
-    background-color: black;
-  background-size: cover;
+  background-image: url("https://64.media.tumblr.com/668ae41a3de4bc2b51e6a54bb0e9181a/tumblr_pat783U9tp1xorxdxo1_1280.jpg");
+  background-color: black;
+  background-size: 1300px;
   background-position: center;
   overflow: hidden;
 }
 
 header a {
 	color: none;
-	font-size: 25px;
+	font-size: 20px;
 	text-decoration: none; 
 	display: block;
 	margin: 0 auto;
@@ -25,14 +25,14 @@ header a {
 
 
 header h1 {
-	color: rgb(255, 255, 255);
-	font-size: 25px;
+	color: rgb(0, 0, 0);
+	font-size: 35px;
 	margin: 0;
-    text-align: center;
+  text-align: center;
 }
 
 header h1:hover {
-	color: #fff7f7ab;
+	color: #0e0e0ee6;
 }
 
 
@@ -58,22 +58,23 @@ footer li {
 }
 
 footer li a {
-	color: rgba(245, 245, 245, 0.705);
-	font-size: 20px;
+	color: rgb(0, 0, 0);
+	font-size: 30px;
 	text-decoration: none;
 }
 
 footer li a:hover {
-	color: #ffffff;
+	color: #161515ac;
 }
 
 
 
 .text-container {
-  color: rgba(245, 245, 245, 0.714);
+  color: rgba(0, 0, 0, 0.714);
   width: 100%;
   max-width: 800px; 
   margin: 0 auto; 
+  margin: -130px auto 0;
   text-align: center;
   
 }

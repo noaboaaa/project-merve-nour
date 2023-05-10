@@ -34,6 +34,10 @@ function initApp() {
 
   //-------------SEARCH SORT FILTER-------------//
 
+  document
+    .querySelector("#input-search")
+    .addEventListener("input", searchPosts);
+
   /*document
     .querySelector("#input-search")
     .addEventListener("keyup", inputSearchChanged);
@@ -98,6 +102,21 @@ function showPosts(listOfPosts) {
       }
     }
   });
+}
+
+//===================SEARCH SORT FILTER-------------//
+
+function searchPosts() {
+  const query = document.querySelector("#input-search").value.toLowerCase();
+  const filteredPosts = posts.filter((post) => {
+    return (
+      post.description.toLowerCase().includes(query) ||
+      post.name.toLowerCase().includes(query) ||
+      post.song.toLowerCase().includes(query) ||
+      post.year.toString().includes(query)
+    );
+  });
+  showPosts(filteredPosts);
 }
 
 //------create post-------------------------------/
@@ -165,7 +184,6 @@ async function updatePostsGrid() {
 //-------------POST CLICKED DIALOG OPENED--------------------/
 
 // called when image is clicked
-// called when image is clicked
 function imageClicked(postObject) {
   console.log(postObject); // Debugging statement
 
@@ -188,6 +206,7 @@ function imageClicked(postObject) {
   document.querySelector("#post-clicked-dialog").showModal();
 }
 
+//-------closes dialog when "close" is clicked -----
 function hidePostClicked() {
   console.log("closed post clicked dialog!");
   const postClickedDialog = document.querySelector("#post-clicked-dialog");
@@ -199,22 +218,32 @@ function hidePostClicked() {
   }
 }
 
+//-------pop up, deletes post, closes dialog and updates grid---
 async function deleteClicked(postObject) {
-  const postId = postObject.id;
-  const response = await fetch(`${endpoint}/posts/${postId}.json`, {
-    method: "DELETE",
-  });
+  // Ask the user to confirm the deletion
+  const confirmed = confirm("Are you sure you want to delete this post?");
 
-  if (response.ok) {
-    // Close the full-window dialog
-    document.querySelector("#dialog-full-window").close();
+  // If the user confirmed the deletion
+  if (confirmed) {
+    const postId = postObject.id;
+    const response = await fetch(`${endpoint}/posts/${postId}.json`, {
+      method: "DELETE",
+    });
 
-    // Update the posts grid
-    updatePostsGrid();
-  } else {
-    alert("Error deleting the post. Please try again.");
+    if (response.ok) {
+      alert("Post successfully deleted!");
+      updatePostsGrid();
+
+      // Close the dialog after post is deleted
+      const postClickedDialog = document.querySelector("#post-clicked-dialog");
+      postClickedDialog.close();
+    } else {
+      alert("Error deleting the post. Please try again.");
+    }
   }
 }
+
+//-------------UPDATE POST --------------------/
 
 function updateClicked(postObject) {
   // Implement update functionality
