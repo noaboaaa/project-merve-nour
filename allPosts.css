@@ -258,16 +258,17 @@ main {
   background-color: black;
   border-radius: 25px;
   animation: fadeIn 0.3s;
-
 }
 
 #post-clicked-dialog p {
   color: white;
-
-  
 }
 
-
+#dialog-image {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
 
 #post-clicked-dialog img {
   position: absolute;
@@ -279,10 +280,10 @@ main {
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 50px;
-
 }
+
 #post-clicked-info p#Description {
-  max-width: 110px; /* adjust the value as needed */
+  max-width: 110px;
   word-wrap: break-word;
 }
 
@@ -291,7 +292,6 @@ main {
   bottom: 100px;
   left: 20px;
   font-size: medium;
-
 }
 
 #post-clicked-info p {
@@ -299,6 +299,7 @@ main {
   width: 50%;
   margin-right: 10px;
 }
+
 
 /*----------update-post-dialog---------------*/
 
@@ -649,5 +650,6 @@ main {
 #delete-button {
   left: 10px;
 }
+
 
 

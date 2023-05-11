@@ -10,39 +10,69 @@
         font-family: Copperplate, sans-serif;
       }
     </style>
-    <title>Document</title>
+    <title>The Illusion of Immortality</title>
 </head>
 <body>
   <header>
     <a href="homePage.html"><h1>The Illusion of Immortality</h1></a>
   </header>
 
-    <!---------------Search and Sort functions------------------------>
-      <br />
-      <br />
-    <label for="input-search">Search:</label>
+<!---------------Search and Sort functions------------------------>
+<br />
+<br />
+<label for="input-search">Search:</label>
 <input type="text" id="input-search" placeholder="Search">
 
 <select id="sort-options">
-    <option value="nosort" selected>Original Order</option>
-    <option value="year">Sort by Year (Newest First)</option>
-    <option value="song">Sort by Song Title (A-Z)</option>
+  <option value="year">Sort by Year (Newest First)</option>
+  <option value="song">Sort by Song Title (A-Z)</option>
 </select>
 
+<!-------------------- HTML for success and error pop-ups ------------------------->
+<div id="success-popup" class="popup success-popup">
+  Post successfully updated.
+</div>
 
-  <!-- grid container  -->
+<div id="error-popup" class="popup error-popup">
+  There was an error updating the post. Please try again later.
+</div>
 
-    <article>
-  <div id="posts" class="grid-container">
-    <div class="grid-item">
-      <img src="" alt="" />
-    </div>
-  </div>
-  </article>
+<div id="create-success-popup" class="popup success-popup">
+  Post successfully created.
+</div>
 
+<div id="create-error-popup" class="popup error-popup">
+  There was an error creating the post. Please try again later.
+</div>
 
-  <!-----------------------POST CLICKED DIALOGMore info--------------------------------->
- 
+<!--------------------------- CSS for pop-ups ----------------------------->
+<style>
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5c535345;
+    padding: 20px;
+    border: 1px solid #13131368;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+  }
+
+  .success-popup {
+    color: #ffffff;
+  }
+
+  .error-popup {
+    color: #ff0000;
+  }
+</style>
+
+<!------------------------ grid container ---------------------------->
+<div id="posts" class="grid-container"></div>
+
+<!-----------------------POST CLICKED--------------------------------->
 <dialog id="post-clicked-dialog">
   <div id="post-clicked-grid">
     <div id="post-clicked-info">
@@ -55,105 +85,97 @@
       <img id="dialog-image" src="" alt="post image">
     </div>
     <button id="btn-close-dialog">close</button>
-  <button id="btn-open-update-post-dialog">update</button>
-  <button id="btn-delete">delete</button>
+    <button id="btn-open-update-post-dialog">update</button>
+    <button id="btn-delete">delete</button>
   </div>
-  
 </dialog>
+
 
 
   <!-----------------------Create Post--------------------------------->
 <div class="dialog-container">
-    <div id="overlay" style="display: none;"></div>
-    <dialog id="create-post-dialog">
-      <div id="chuliki-form">
-        <form id="form-create-post" class="create-post-form" method="dialog">
-          <div class="title">
-            <h2>leave your mark</h2>
+  <div id="overlay" style="display: none;"></div>
+  <dialog id="create-post-dialog">
+    <div id="chuliki-form">
+      <form id="form-create-post" class="create-post-form" method="dialog">
+        <div class="title">
+          <h2>leave your mark</h2>
+        </div>
+        <div class="half">
+          <div class="item">
+            <label for="picture-upload">upload a picture</label>
+            <p>of a memory of something silly or something sad. a sunset a face a ladybug.</p>
+            <input name="image" type="url" id="picture-upload" required>
           </div>
-          <div class="half">
-            <div class="item">
-              <label for="picture-upload">upload a picture</label>
-              <p>of a memory of something silly or something sad. a sunset a face a ladybug.</p>
-              <input name="image" type="url" id="picture-upload" required>
-
-            </div>
-          </div>
-          <div class="full">
-            <label for="write">write something</label>
-            <p>tell the strangers of the internet about your picture.</p>
-            <textarea name="description" id="write"></textarea required>
-  </div>
-  <div class="item1">
-    <label for="name">add your name. or don't.</label>
-  <input name="name" type="text" id="picture-author" placeholder="anon">
-  </div>
-
-   <div class="item2">
-    <label for="song">add a song it reminds you of.</label>
-  <input name="song" type="text" id="picture-song" placeholder="just say yes snow patrol">
-  </div>
-
-  <div class="item3">
-    <label for="year">what year was it taken?</label>
-  <input name="year" type="text" id="picture-year" placeholder="2019">
-  </div>
-  <div class="action">
-    <input type="submit" value="post">
-    <input type="reset" value="reset">
-  </div>
-  </div>
- <button type="button" id="close-create-post-dialog">Close</button>
-</form>
-</dialog>
-    
+        </div>
+        <div class="full">
+          <label for="write">write something</label>
+          <p>tell the strangers of the internet about your picture.</p>
+          <textarea name="description" id="write" required></textarea>
+        </div>
+        <div class="item1">
+          <label for="name">add your name. or don't.</label>
+          <input name="name" type="text" id="picture-author" placeholder="anon">
+        </div>
+        <div class="item2">
+          <label for="song">add a song it reminds you of.</label>
+          <input name="song" type="text" id="picture-song" placeholder="just say yes snow patrol">
+        </div>
+        <div class="item3">
+          <label for="year">what year was it taken?</label>
+          <input name="year" type="text" id="picture-year" placeholder="2019">
+        </div>
+        <div class="action">
+          <input type="submit" value="post">
+          <input type="reset" value="reset">
+        </div>
+      </form>
+    </div>
+    <button type="button" id="close-create-post-dialog">Close</button>
+  </dialog>
 </div>
 
-
     <!-----------------------Update Post--------------------------------->
-<div class="dialog-update-post-container"
-    <div id="overlay" style="display: none;"></div>
-    <dialog id="update-post-dialog">
-      <div id="chuliki-update-form">
-        <form id="form-update-post" class="create-post-form" method="dialog">
-          <div class="title">
-            <h2>leave your mark</h2>
+<div class="dialog-update-post-container">
+  <div id="overlay" style="display: none;"></div>
+  <dialog id="update-post-dialog">
+    <div id="chuliki-update-form">
+      <form id="form-update-post" class="create-post-form" method="dialog">
+        <div class="title">
+          <h2>leave your mark</h2>
+        </div>
+        <div class="half">
+          <div class="item">
+            <label for="picture-upload">upload a picture</label>
+            <p>of a memory of something silly or something sad. a sunset a face a ladybug.</p>
+            <input name="image" type="url" id="picture-upload" placeholder="add image URL here" required>
           </div>
-          <div class="half">
-            <div class="item">
-              <label for="picture-upload">upload a picture</label>
-              <p>of a memory of something silly or something sad. a sunset a face a ladybug.</p>
-              <input name="image" type="url" id="picture-upload" placeholder="add iamge url here"required>
-            </div>
-          </div>
-          <div class="full">
-            <label for="write">write something</label>
-            <p>tell the strangers of the internet about your picture.</p>
-            <textarea name="description" id="write"></textarea required>
-  </div>
-  <div class="item1">
-    <label for="name">add your name. or don't.</label>
-  <input name="name" type="text" id="picture-author" placeholder="anon">
-  </div>
-
-   <div class="item2">
-    <label for="song">add a song it reminds you of.</label>
-  <input name="song" type="text" id="picture-song" placeholder="just say yes snow patrol">
-  </div>
-
-  <div class="item3">
-    <label for="year">what year was it taken?</label>
-  <input name="year" type="text" id="picture-year" placeholder="2019">
-  </div>
-  <div class="action">
-    <input type="submit" value="post">
-    <input type="reset" value="reset">
-  </div>
-  </div>
- <button type="button" id="close-update-post-dialog">Close</button>
-</form>
-</dialog>
-    
+        </div>
+        <div class="full">
+          <label for="write">write something</label>
+          <p>tell the strangers of the internet about your picture.</p>
+          <textarea name="description" id="write" required></textarea>
+        </div>
+        <div class="item1">
+          <label for="name">add your name. or don't.</label>
+          <input name="name" type="text" id="picture-author" placeholder="anon">
+        </div>
+        <div class="item2">
+          <label for="song">add a song it reminds you of.</label>
+          <input name="song" type="text" id="picture-song" placeholder="just say yes snow patrol">
+        </div>
+        <div class="item3">
+          <label for="year">what year was it taken?</label>
+          <input name="year" type="text" id="picture-year" placeholder="2019">
+        </div>
+        <div class="action">
+          <input type="submit" value="post">
+          <input type="reset" value="reset">
+        </div>
+      </form>
+    </div>
+    <button type="button" id="close-update-post-dialog">Close</button>
+  </dialog>
 </div>
 
   <footer>
