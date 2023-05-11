@@ -300,18 +300,50 @@ main {
   margin-right: 10px;
 }
 
-/*update-post-dialog*/
+/*----------update-post-dialog---------------*/
 
 #update-post-dialog {
-  margin: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+  background-image: url('https://lh3.googleusercontent.com/-0Sp8b99qOVy832wzIFhqSF763SdqNX93wVAsT3QN63i_i1z0lo6PjBpTIDyhWl8mnJ3w-Qf4uBQHSCiJgBges17COulR9Jn0QO-Xuuon3JxeGkTQsQudOIpbhvfnxRk1Rgtz_3qtMGG1uporAPo_rQptsNGe27goVw8e6wiAiqhaaKVnB0Eet74ssYwLawMdl0oHFYm0sJ1q7gmHuCc7vGR_517tDG9ZwP0bwnE1YwtR0a88c7AMhS75cTLC42MWv149rg2HZHuR4MS1Xh1R9g9G_oT2009U5ulIT2wxddYZ1s078N-neBpxjsN44HCSBcCm-hMW9upW3TTUeSG-n2S7xHFaZhyRenkSySbMSFhAEuuUhff542MY_vn_TtF1GoX1mOQgLrtebil4m4O__i3SPPClSciGkvDH3C0yIqu1-JAFmVLYXsgXaU_TlN6RmuZUwb-SSOV8ZQkd0zZdpwmKch_Y93ZzFUEZvHKDqB2DG3hzdgTCuMwfgk5g43r2IKRT9s0ya16-SfiVPv6Z3mWP8yXf7--AQ06yNnaDw6uSH_4dYy6RAPIubegZxGGkVD9t5TWRPkdVzgvCaCOmYOtn8-Varp9F6blq66zRDJuzCCyvkR4AMjkD2iblBiN9UtWP98UpkFckMEkIqVoUk75PcKO_lilN5DaCvnc24_bPRks2mjT8bAf2--t8_1WzDBFto0Ohq_UMrNZksem2svh4vxS2Zvlg9U0wKsRbXqjFt0f_L9RRKkqYV1AxGpRIqSoMNzt0SvXRkM9SCLUg0VZYa8g6f_B1RYqHvgatCMDuSp9v9WeEoFqe7anwlFY9m9ty2G-BNGfi0LAyjDPuYS6fCDCoGYCBnTkaDyLWXJDXAT4zCyspry6UETbE43ff2BwwjuAVcRP0YxKeICcyDsu_P9bL34bfHHdZwfd6jixEdn4=w1170-h658-s-no?authuser=0');
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+
+}
+
+#picture-author,
+#picture-song,
+#picture-year {
+  display: inline-block;
+  width: 45%;
+  margin: 0 5% 10px 5%;
+  box-sizing: border-box;
+}
+
+#chuliki-update-form * {
+
   padding: 0px;
   box-sizing: border-box;
   font-family: Copperplate, sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
-#update-post-dialog form {
-  background: rgba(128, 128, 128, 0.267);
+#chuliki-update-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+#chuliki-update-form form {
+  background: rgba(70, 67, 67, 0.267);
   width: 640px;
   margin: 50px auto;
   max-width: 97%;
@@ -320,9 +352,10 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.184);
   height: 100%;
   /* added */
+  text-align: center;
 }
 
-#update-post-dialog .title h2 {
+#chuliki-update-form form .title h2 {
   letter-spacing: 5px;
   border-bottom: 1px solid white;
   display: inline-block;
@@ -330,25 +363,25 @@ main {
   margin-bottom: 32px;
 }
 
-#update-post-dialog .half {
+#chuliki-update-form form .half {
   display: flex;
   justify-content: space-between;
 }
 
-#update-post-dialog .half .item {
+#chuliki-update-form form .half .item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#update-post-dialog label {
+#chuliki-update-form form label {
   font-size: 13px;
   letter-spacing: 3.5px;
   margin-bottom: 16px;
 }
 
-#update-post-dialog .half .item input {
+#chuliki-update-form form .half .item input {
   border-radius: 4px;
   border: 1px solid white;
   outline: 0;
@@ -359,12 +392,12 @@ main {
   font-size: 17px;
 }
 
-#update-post-dialog .full {
+#chuliki-update-form form .full {
   margin-bottom: 24px;
   padding-top: 10px;
 }
 
-#update-post-dialog .full textarea {
+#chuliki-update-form form .full textarea {
   background: transparent;
   border-radius: 4px;
   border: 1px solid white;
@@ -375,16 +408,17 @@ main {
   font-size: 17px;
 }
 
-#update-post-dialogform .action {
+#chuliki-update-form form .action {
   margin-bottom: 30px;
 }
 
-#update-post-dialog .full label {
+#chuliki-update-form .full label {
   display: block;
   text-align: center;
 }
 
-#update-post-dialog form .action input {
+
+#chuliki-update-form form .action input {
   background: rgba(128, 128, 128, 0.267);
   border-radius: 2px;
   border: 1px solid white;
@@ -398,18 +432,19 @@ main {
   margin-right: 10px;
 }
 
-#update-post-dialog .item1,
-#update-post-dialog .item2,
-#update-post-dialog .item3 {
+#chuliki-update-form .item1,
+#chuliki-update-form .item2,
+#chuliki-update-form .item3 {
   text-align: center;
 }
 
-#update-post-dialog .item1 input,
-#update-post-dialog .item2 input,
-#update-post-dialog .item3 input {
+#chuliki-update-form .item1 input,
+#chuliki-update-form .item2 input,
+#chuliki-update-form .item3 input {
   background-color: rgba(255, 255, 255, 0.277);
   border: 1px solid white;
 }
+
 
 
 /*delete-post-dialog*/
@@ -522,8 +557,6 @@ main {
   display: inline-block;
   padding-bottom: 8px;
   margin-bottom: 32px;
-
-
 }
 
 #chuliki-form form .half {

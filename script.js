@@ -265,10 +265,18 @@ async function deleteClicked(postObject) {
 //======================UPDATE POST ======================//
 
 function showUpdatePost(postObject) {
+  // Close the post clicked dialog
+  const postClickedDialog = document.querySelector("#post-clicked-dialog");
+  if (postClickedDialog.close) {
+    postClickedDialog.close();
+  } else {
+    postClickedDialog.style.display = "none";
+    document.querySelector("#overlay").style.display = "none";
+  }
+
   console.log("opened update post dialog!");
   const updatePostDialog = document.querySelector("#update-post-dialog");
 
-  // Replace "#update-post-form" with "#form-update-post"
   const updateForm = document.querySelector("#form-update-post");
 
   // Get postId from the postObject
@@ -281,13 +289,16 @@ function showUpdatePost(postObject) {
     console.error("The #form-update-post element is not found in the HTML.");
   }
 
-  if (updatePostDialog.showModal) {
-    updatePostDialog.showModal();
-  } else {
-    updatePostDialog.style.display = "block";
-    document.querySelector("#overlay").style.display = "block";
+  if (!updatePostDialog.open) {
+    if (updatePostDialog.showModal) {
+      updatePostDialog.showModal();
+    } else {
+      updatePostDialog.style.display = "block";
+      document.querySelector("#overlay").style.display = "block";
+    }
   }
 }
+
 
 
 function hideUpdatePost() {
