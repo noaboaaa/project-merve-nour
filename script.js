@@ -25,14 +25,18 @@ function initApp() {
     .addEventListener("submit", createPostClicked);
 
   //-------------UPDATE POST/ DIALOG CLICKED-------------//
+  document
+    .querySelector("#btn-open-update-post-dialog")
+    .addEventListener("click", showUpdatePost);
+
+  document
+    .querySelector("#close-update-post-dialog")
+    .addEventListener("click", hideUpdatePost);
 
   document
     .querySelector("#form-update-post")
     .addEventListener("submit", updatePostClicked);
 
-  document
-    .querySelector("#btn-close-dialog")
-    .addEventListener("click", hidePostClicked);
 
   //-------------SEARCH SORT FILTER-------------//
 
@@ -160,6 +164,8 @@ function hideCreatePost() {
 function createPostClicked(event) {
   event.preventDefault(); // Prevent form submission and page refresh
   const form = this;
+  console.log("in form");
+  console.log(form);
   const image = form.image.value;
   const description = form.description.value;
   const name = form.name.value;
@@ -167,6 +173,8 @@ function createPostClicked(event) {
   const song = form.song.value;
   createPost(image, description, name, year, song);
   form.reset();
+  document.querySelector("#create-post-dialog").close();
+
 }
 
 async function createPost(image, description, name, year, song) {
@@ -178,6 +186,7 @@ async function createPost(image, description, name, year, song) {
     song: song,
   };
   const json = JSON.stringify(newPost);
+  console.log(json);
   const response = await fetch(`${endpoint}/posts.json`, {
     method: "POST",
     body: json,
@@ -197,144 +206,142 @@ async function updatePostsGrid() {
 
 // called when image is clicked
 function imageClicked(postObject) {
-  console.log(postObject); // Debugging statement
+    console.log(postObject); // Debugging statement
 
-  document.querySelector("#dialog-image").src = postObject.image;
+    document.querySelector("#dialog-image").src = postObject.image;
 
-  document.querySelector("#name").textContent = postObject.name;
-  document.querySelector("#year").textContent = postObject.year;
-  document.querySelector("#song").textContent = postObject.song;
-  document.querySelector("#Description").textContent = postObject.description;
+    document.querySelector("#name").textContent = postObject.name;
+    document.querySelector("#year").textContent = postObject.year;
+    document.querySelector("#song").textContent = postObject.song;
+    document.querySelector("#Description").textContent = postObject.description;
 
-  // Add event listeners for delete and update buttons in the detail view
-  document
-    .querySelector("#btn-delete")
-    .addEventListener("click", () => deleteClicked(postObject));
-  document
-    .querySelector("#btn-update")
-    .addEventListener("click", () => updateClicked(postObject));
+    // Add event listeners for delete and update buttons in the detail view
+    document.querySelector("#btn-delete").addEventListener("click", () => deleteClicked(postObject));
+    document.querySelector("#btn-open-update-post-dialog").addEventListener("click", () => showUpdatePost(postObject));
 
-  // Open the dialog
-  document.querySelector("#post-clicked-dialog").showModal();
+    // Open the dialog
+    document.querySelector("#post-clicked-dialog").showModal();
 }
 
 //-------closes dialog when "close" is clicked -----
 function hidePostClicked() {
-  console.log("closed post clicked dialog!");
-  const postClickedDialog = document.querySelector("#post-clicked-dialog");
-  if (postClickedDialog.close) {
-    postClickedDialog.close();
-  } else {
-    postClickedDialog.style.display = "none";
-    document.querySelector("#overlay").style.display = "none";
-  }
+    console.log("closed post clicked dialog!");
+    const postClickedDialog = document.querySelector("#post-clicked-dialog");
+    if (postClickedDialog.close) {
+        postClickedDialog.close();
+    } else {
+        postClickedDialog.style.display = "none";
+        document.querySelector("#overlay").style.display = "none";
+    }
 }
 
 //-------pop up, deletes post, closes dialog and updates grid---
 async function deleteClicked(postObject) {
-  // Ask the user to confirm the deletion
-  const confirmed = confirm("Are you sure you want to delete this post?");
+    // Ask the user to confirm the deletion
+    const confirmed = confirm("Are you sure you want to delete this post?");
 
-  // If the user confirmed the deletion
-  if (confirmed) {
-    const postId = postObject.id;
-    const response = await fetch(`${endpoint}/posts/${postId}.json`, {
-      method: "DELETE",
-    });
+    // If the user confirmed the deletion
+    if (confirmed) {
+        const postId = postObject.id;
+        const response = await fetch(`${endpoint}/posts/${postId}.json`, {
+            method: "DELETE"
+        });
 
-    if (response.ok) {
-      alert("Post successfully deleted!");
-      updatePostsGrid();
+        if (response.ok) {
+            alert("Post successfully deleted!");
+            updatePostsGrid();
 
-      // Close the dialog after post is deleted
-      const postClickedDialog = document.querySelector("#post-clicked-dialog");
-      postClickedDialog.close();
-    } else {
-      alert("Error deleting the post. Please try again.");
+            // Close the dialog after post is deleted
+            const postClickedDialog = document.querySelector("#post-clicked-dialog");
+            postClickedDialog.close();
+        } else {
+            alert("Error deleting the post. Please try again.");
+        }
     }
-  }
 }
+
+//======================UPDATE POST =========
 
 //======================UPDATE POST ======================//
 
-function getPostById(id) {
-  for (let i = 0; i < posts.length; i++) {
-    if (posts[i].id === id) {
-      return posts[i];
-    }
-  }
-  return null; // return null if post with given id not found
-}
+function showUpdatePost(postObject) {
+  console.log("opened update post dialog!");
+  const updatePostDialog = document.querySelector("#update-post-dialog");
 
-function showUpdatePostDialog(postId) {
-  var post = getPostById(postId);
-  console.log("postId:", postId);
-  console.log("post:", post);
+  // Replace "#update-post-form" with "#form-update-post"
+  const updateForm = document.querySelector("#form-update-post");
 
-  if (post && post.name && post.description) {
-    document.getElementById("update-post-name").value = post.name;
-    document.getElementById("update-post-description").value = post.description;
-    document.getElementById("update-post-year").value = post.year;
-    document.getElementById("update-post-song").value = post.song;
-    document.getElementById("update-post-image").src = post.image;
-    document.getElementById("update-post-id").value = postId;
-    console.log("Adding show class to update post dialog");
-    document.getElementById("update-post-dialog").classList.add("show");
+  // Get postId from the postObject
+  let postId = postObject.id;
+
+  // Set the postId as a data attribute on the form
+  if (updateForm) {
+    updateForm.setAttribute("data-post-id", postId);
   } else {
-    console.log("Post or post properties are undefined");
+    console.error("The #form-update-post element is not found in the HTML.");
+  }
+
+  if (updatePostDialog.showModal) {
+    updatePostDialog.showModal();
+  } else {
+    updatePostDialog.style.display = "block";
+    document.querySelector("#overlay").style.display = "block";
   }
 }
 
-function updateClicked(postObject) {
-  if (
-    !postObject ||
-    !postObject.image ||
-    !postObject.description ||
-    !postObject.name ||
-    !postObject.year ||
-    !postObject.song
-  ) {
-    console.error("Invalid post object passed to showUpdatePostDialog");
-    return;
-  }
 
-  showUpdatePostDialog(postObject.id);
+function hideUpdatePost() {
+  console.log("closed update post dialog!");
+  const updatePostDialog = document.querySelector("#update-post-dialog");
+  if (updatePostDialog.close) {
+    updatePostDialog.close();
+  } else {
+    updatePostDialog.style.display = "none";
+    document.querySelector("#overlay").style.display = "none";
+  }
 }
 
-
-async function updatePostClicked(event) {
+function updatePostClicked(event) {
   event.preventDefault();
-  const form = event.target;
+  const form = this;
+  console.log("in form");
+  console.log(form);
   const image = form.image.value;
   const description = form.description.value;
   const name = form.name.value;
   const year = form.year.value;
   const song = form.song.value;
-  const postId = form.postId.value; // Assuming you added a hidden input with postId in the update post form
 
+  const postId = form.getAttribute("data-post-id"); // Get the postId from the form's data attribute
+
+  updatePost(postId, image, description, name, year, song);
+  form.reset();
+  document.querySelector("#update-post-dialog").close();
+}
+
+async function updatePost(postId, image, description, name, year, song) {
   const updatedPost = {
-    image,
-    description,
-    name,
-    year,
-    song,
+    image: image,
+    description: description,
+    name: name,
+    year: year,
+    song: song,
   };
+  const json = JSON.stringify(updatedPost);
+  console.log(json);
 
   const response = await fetch(`${endpoint}/posts/${postId}.json`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updatedPost),
+    method: "PATCH", // Use PATCH method to update the existing post
+    body: json,
   });
-
   if (response.ok) {
-    // Close the update post dialog
-    document.querySelector("#dialog-update-post").close();
-
-    // Update the posts grid
+    console.log("Data updated on FireBase!");
     updatePostsGrid();
-  } else {
-    alert("Error updating the post. Please try again.");
   }
 }
+
+async function updatePostsGrid() {
+  posts = await getPosts();
+  showPosts(posts);
+}
+
